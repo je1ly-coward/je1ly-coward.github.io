@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>re-zorropub</title>
+      <link href="/2021/08/25/re-zorropub/"/>
+      <url>/2021/08/25/re-zorropub/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="zorropub"><a href="#zorropub" class="headerlink" title="zorropub"></a>zorropub</h2><p>直接IDA打开，找到关键函数<br><a href="https://imgtu.com/i/hZmvhn"><img src="https://z3.ax1x.com/2021/08/25/hZmvhn.png" alt="hZmvhn.png"></a><br><a href="https://imgtu.com/i/hZnnc6"><img src="https://z3.ax1x.com/2021/08/25/hZnnc6.png" alt="hZnnc6.png"></a><br>可以看到我们输入的值是v6，是drink id 符合要求后才到下面的循环<br>但是有生成随机数，，最后回与MD5的字符串进行比较，最后结果相同即可<br>可以先按照循环进行爆破看有哪些满足条件的数<br>    import subprocess</p><p>l = []<br>for i in range(65535):<br>    t = 0<br>    j = i<br>    while i:<br>        i = i &amp; (i - 1)<br>        t += 1<br>    if t == 10:<br>        l.append(j)<br>但是，，不懂MD5是怎么爆破的，之后看到这段代码(暂时不知道原理)<br>    for i in l:<br>    proc = subprocess.Popen([‘./zorro_bin’], stdin=subprocess.PIPE, stdout=subprocess.PIPE)<br>    out = proc.communicate((‘1\n%s\n’ % i).encode(‘utf-8’))[0]<br>    if “nullcon”.encode(‘utf-8’) in out:<br>      print(out)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 攻防世界 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> reverse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDA动态调试</title>
+      <link href="/2021/08/25/IDA%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/"/>
+      <url>/2021/08/25/IDA%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2021/08/23/hello-world/"/>
       <url>/2021/08/23/hello-world/</url>
