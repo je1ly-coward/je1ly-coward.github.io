@@ -4,11 +4,49 @@
   
     
     <entry>
+      <title>re-BabyXor</title>
+      <link href="/2021/08/28/re-BabyXor/"/>
+      <url>/2021/08/28/re-BabyXor/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>re-secret-string-400,deedeedee</title>
+      <link href="/2021/08/28/re-secret-string-400-deedeedee/"/>
+      <url>/2021/08/28/re-secret-string-400-deedeedee/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="secret-string-400"><a href="#secret-string-400" class="headerlink" title="secret-string-400"></a>secret-string-400</h2><p>直接用IDA打开解压后的文件<br><a href="https://imgtu.com/i/hl74VP"><img src="https://z3.ax1x.com/2021/08/28/hl74VP.png" alt="hl74VP.png"></a><br>但是没有得到什么信息，之后用exeinfope打开，才知道原来这也是一个压缩包，<br><a href="https://imgtu.com/i/hl7Orn"><img src="https://z3.ax1x.com/2021/08/28/hl7Orn.png" alt="hl7Orn.png"></a><br>修改文件后缀，解压后可以看到文件<br><a href="https://imgtu.com/i/hl7Xbq"><img src="https://z3.ax1x.com/2021/08/28/hl7Xbq.png" alt="hl7Xbq.png"></a><br>然后打开html文件，发现是输入页面，<br><a href="https://imgtu.com/i/hlqBEq"><img src="https://z3.ax1x.com/2021/08/28/hlqBEq.png" alt="hlqBEq.png"></a><br>输入正确可以得到flag，接下来看代码，找到输出的位置<br><a href="https://imgtu.com/i/hlqr5V"><img src="https://z3.ax1x.com/2021/08/28/hlqr5V.png" alt="hlqr5V.png"></a><br>但是是没有看到的，只能找到最后的位置，要找到关键函数，在调试中调试，要在fun函数中加上<em>console.log(‘code’ + command.args)</em><br>加上保存之后，可以在网页部分调试看到代码<br><a href="https://imgtu.com/i/hlqbxe"><img src="https://z3.ax1x.com/2021/08/28/hlqbxe.png" alt="hlqbxe.png"></a><br>nonce字符串和输入的字符串亦或之后和ex数组进行比较，要是相同则输出flag，接下来写代码<br><a href="https://imgtu.com/i/hlLYIx"><img src="https://z3.ax1x.com/2021/08/28/hlLYIx.png" alt="hlLYIx.png"></a></p><h2 id="deedeedee"><a href="#deedeedee" class="headerlink" title="deedeedee"></a>deedeedee</h2><p><a href="https://imgtu.com/i/h10UN6"><img src="https://z3.ax1x.com/2021/08/28/h10UN6.png" alt="h10UN6.png"></a><br>这题，，打开两个文件，也是先拖进IDA，找到关键函数<br><a href="https://imgtu.com/i/h1003D"><img src="https://z3.ax1x.com/2021/08/28/h1003D.png" alt="h1003D.png"></a><br>猜测是要根据函数进行解密，函数又多又杂，在这没什么头绪，看第二个文件，又发现了D语言<br><a href="https://imgtu.com/i/h102UP"><img src="https://z3.ax1x.com/2021/08/28/h102UP.png" alt="h102UP.png"></a><br>然后，记事本打开，，就可以直接看到flag。。。（我也没想到），应该是在第一个文件做题的，，但是没头绪，，，<br><a href="https://imgtu.com/i/h10L5V"><img src="https://z3.ax1x.com/2021/08/28/h10L5V.png" alt="h10L5V.png"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 攻防世界 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> reverse </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>re-zorropub</title>
       <link href="/2021/08/25/re-zorropub/"/>
       <url>/2021/08/25/re-zorropub/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="zorropub"><a href="#zorropub" class="headerlink" title="zorropub"></a>zorropub</h2><p>直接IDA打开，找到关键函数<br><a href="https://imgtu.com/i/hZmvhn"><img src="https://z3.ax1x.com/2021/08/25/hZmvhn.png" alt="hZmvhn.png"></a><br><a href="https://imgtu.com/i/hZnnc6"><img src="https://z3.ax1x.com/2021/08/25/hZnnc6.png" alt="hZnnc6.png"></a><br>可以看到我们输入的值是v6，是drink id 符合要求后才到下面的循环<br>但是有生成随机数，，最后回与MD5的字符串进行比较，最后结果相同即可<br>可以先按照循环进行爆破看有哪些满足条件的数</p><blockquote><p>import subprocess<br>l = []<br>for i in range(65535):<br>    t = 0<br>    j = i<br>    while i:<br>        i = i &amp; (i - 1)<br>        t += 1<br>    if t == 10:<br>        l.append(j)</p></blockquote><p>但是，，不懂MD5是怎么爆破的，之后看到这段代码,就是爆破MD5的脚本(暂时不知道原理)</p><blockquote><p>   for i in l:<br>    proc = subprocess.Popen([‘./zorro_bin’], stdin=subprocess.PIPE, stdout=subprocess.PIPE)<br>    out = proc.communicate((‘1\n%s\n’ % i).encode(‘utf-8’))[0]<br>    if “nullcon”.encode(‘utf-8’) in out:<br>      print(out)</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="zorropub"><a href="#zorropub" class="headerlink" title="zorropub"></a>zorropub</h2><p>直接IDA打开，找到关键函数<br><a href="https://imgtu.com/i/hZmvhn"><img src="https://z3.ax1x.com/2021/08/25/hZmvhn.png" alt="hZmvhn.png"></a><br><a href="https://imgtu.com/i/hZnnc6"><img src="https://z3.ax1x.com/2021/08/25/hZnnc6.png" alt="hZnnc6.png"></a><br>可以看到我们输入的值是v6，是drink id 符合要求后才到下面的循环<br>但是有生成随机数，，最后回与MD5的字符串进行比较，最后结果相同即可<br>可以先按照循环进行爆破看有哪些满足条件的数</p><blockquote><p>import subprocess<br>l = []<br>for i in range(65535):<br>    t = 0<br>    j = i<br>    while i:<br>        i = i &amp; (i - 1)<br>        t += 1<br>    if t == 10:<br>        l.append(j)</p></blockquote><p>但是，，不懂MD5是怎么爆破的，之后看到这段代码,就是爆破MD5的脚本(暂时不知道原理)<br>使用了python的一个模块 subprocess<br><a href="https://www.runoob.com/w3cnote/python3-subprocess.html">https://www.runoob.com/w3cnote/python3-subprocess.html</a><br>这个代码是生成字典，接下来就是创建一个进程，然后输入两个数据，再将得到的结果进行返回，最后来判断返回结果是否包含我们需要的数据</p><blockquote><p>   for i in l:<br>    proc = subprocess.Popen([‘./zorro_bin’], stdin=subprocess.PIPE, stdout=subprocess.PIPE)<br>    out = proc.communicate((‘1\n%s\n’ % i).encode(‘utf-8’))[0]<br>    if “nullcon”.encode(‘utf-8’) in out:<br>      print(out)</p></blockquote>]]></content>
       
       
       <categories>
