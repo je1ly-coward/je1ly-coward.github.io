@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>Wireshark</title>
+      <title>Wireshark和zoomeye使用</title>
       <link href="/2021/10/26/wireshark/"/>
       <url>/2021/10/26/wireshark/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>利用Wireshark分析明文账号和密码<br>首先打开网页登陆页面<br><a href="https://imgtu.com/i/5I9Nyd"><img src="https://z3.ax1x.com/2021/10/26/5I9Nyd.jpg" alt="5I9Nyd.jpg"></a><br>打开wireshark开始抓包，登陆成功后停止抓包<br><a href="https://imgtu.com/i/5I9sfS"><img src="https://z3.ax1x.com/2021/10/26/5I9sfS.jpg" alt="5I9sfS.jpg"></a><br>我们进行的操作是POST，<br>所以搜索：<em>http.request.method==POST</em><br><a href="https://imgtu.com/i/5I9b6J"><img src="https://z3.ax1x.com/2021/10/26/5I9b6J.jpg" alt="5I9b6J.jpg"></a><br>最后找到这个包查看具体信息，<br>然后在<em>HTML Form URL Encoded</em>就可以看到账号密码<br><a href="https://imgtu.com/i/5ICC1e"><img src="https://z3.ax1x.com/2021/10/26/5ICC1e.jpg" alt="5ICC1e.jpg"></a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>利用Wireshark分析明文账号和密码<br>首先打开网页登陆页面<br><a href="https://imgtu.com/i/5I9Nyd"><img src="https://z3.ax1x.com/2021/10/26/5I9Nyd.jpg" alt="5I9Nyd.jpg"></a><br>打开wireshark开始抓包，登陆成功后停止抓包<br><a href="https://imgtu.com/i/5I9sfS"><img src="https://z3.ax1x.com/2021/10/26/5I9sfS.jpg" alt="5I9sfS.jpg"></a><br>我们进行的操作是POST，<br>所以搜索：<em>http.request.method==POST</em><br><a href="https://imgtu.com/i/5I9b6J"><img src="https://z3.ax1x.com/2021/10/26/5I9b6J.jpg" alt="5I9b6J.jpg"></a><br>最后找到这个包查看具体信息，<br>然后在<em>HTML Form URL Encoded</em>就可以看到账号密码<br><a href="https://imgtu.com/i/5ICC1e"><img src="https://z3.ax1x.com/2021/10/26/5ICC1e.jpg" alt="5ICC1e.jpg"></a></p><p>zoomeye<br><a href="https://imgtu.com/i/5IEZAs"><img src="https://z3.ax1x.com/2021/10/26/5IEZAs.jpg" alt="5IEZAs.jpg"></a></p>]]></content>
       
       
       
