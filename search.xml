@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>Kon-Boot</title>
+      <link href="/2021/12/14/Kon-Boot/"/>
+      <url>/2021/12/14/Kon-Boot/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="KonBoot"><a href="#KonBoot" class="headerlink" title="KonBoot"></a>KonBoot</h2><p>KON-Boot是一款专门针对Windows、Linux、MAC登陆密码破解工具，他能绕过系统所设有的登陆密码，让你的登陆畅通无阻。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ping报文</title>
+      <link href="/2021/12/14/ping%E6%8A%A5%E6%96%87/"/>
+      <url>/2021/12/14/ping%E6%8A%A5%E6%96%87/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>应用程序 ping 发出的是 ICMP（Internet Control Message Protocol）报文。主要用于测试网络的连通性，ICMP协议规定：目的主机必须返回ICMP回送应答消息给源主机。如果源主机在一定时间内收到应答，则认为主机可达。</p><p>如果网络畅通的话，返回的信息是：Request from ……，如果不畅通的话，返回的是：Request time out。但是有一种特殊的情况就是：对方的机器关闭了 ping 服务，那么即使该机器连接在网络上，那么你也不能够 ping 到它。 </p><p>Ping位于用户层，一般用来测试一台主机是否可达，该程序发送一份ICMP回显请求报文给主机，并等待返回ICMP回显应答。<br><a href="https://imgtu.com/i/ojYBvD"><img src="https://s4.ax1x.com/2021/12/14/ojYBvD.jpg" alt="ojYBvD.jpg"></a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>OWASP</title>
+      <link href="/2021/12/14/OWASP/"/>
+      <url>/2021/12/14/OWASP/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>OWASP（开放式Web应用程序安全项目）是一个开源的、非营利性的全球性安全组织，致力于改进Web应用程序的安全，这个组织最出名是，它总结了10种最严重的Web应用程序安全风险，警告全球所有的网站拥有者，应该警惕这些最常见、最危险的漏洞。</p><p>OWASP Top 10包括：注入、失效身份验证和会话管理、敏感信息泄露、XML外部实体注入攻击（XXE）、存取控制中断、安全性错误配置、跨站脚本攻击（XSS）、不安全的反序列化、使用具有已知漏洞的组件、日志记录和监控不足。</p><h2 id="注入"><a href="#注入" class="headerlink" title="注入"></a>注入</h2><p>当Web应用程序缺乏对使用的数据进行验证和清理的时候，极易发生注入攻击。著名的注入攻击有SQL注入、NoSQL注入、OS注入等。注入攻击会导致数据丢失和被破坏，甚至主机被黑客完全接管。</p><h2 id="失效身份验证和会话管理"><a href="#失效身份验证和会话管理" class="headerlink" title="失效身份验证和会话管理"></a>失效身份验证和会话管理</h2><p>失效身份验证和会话管理主要发生在Web应用程序身份验证环节，身份验证机制出现逻辑问题便会出现此类问题。黑客会利用身份验证漏洞，尝试控制系统中的账户，一旦操作成功，他便能合法的进行任何操作。</p><h2 id="敏感信息泄露"><a href="#敏感信息泄露" class="headerlink" title="敏感信息泄露"></a>敏感信息泄露</h2><p>敏感信息泄露是目前存在最广泛的Web应用程序问题，Web应用程序、API未加密，或者无法准确保护敏感信息，均会导致个人信息、密码等敏感信息泄露，被黑客出售给第三人，或用于违法犯罪目的。</p><h2 id="XML外部实体注入攻击（XXE）"><a href="#XML外部实体注入攻击（XXE）" class="headerlink" title="XML外部实体注入攻击（XXE）"></a>XML外部实体注入攻击（XXE）</h2><p>这种攻击主要针对解析XML输入的Web应用程序。弱配置的XML解析器处理包含外部实体引用的XML输入时，就会发生XXEE攻击。黑客会利用这个漏洞窃取URI文件处理器的内部文件和共享文件，从而监听或执行远程代码，或发动拒绝服务攻击。</p><h2 id="存取控制中断"><a href="#存取控制中断" class="headerlink" title="存取控制中断"></a>存取控制中断</h2><p>如果对已经身份验证通过的用户，没有实施合适的访问权限控制，那么攻击者便可以通过这个漏洞，去使用未经授权的功能，以及查看未经授权的数据，例如访问用户的账户、查看敏感文件等等。</p><h2 id="安全性错误配置"><a href="#安全性错误配置" class="headerlink" title="安全性错误配置"></a>安全性错误配置</h2><p>操作者使用默认配置、临时配置、开源云存储、http标头配置等不当配置，攻击者便会利用这些错误配置，获得更高的权限。安全性错误配置是最常见的漏洞之一，攻击难度低。攻击者可使用自动化程序发动攻击，极其危险。</p><h2 id="跨站脚本攻击（XSS）"><a href="#跨站脚本攻击（XSS）" class="headerlink" title="跨站脚本攻击（XSS）"></a>跨站脚本攻击（XSS）</h2><p>黑客将恶意的客户端脚本注入到目标网站，并将该网站用作传播方法。攻击者发动XSS攻击后，受害网站的显示方式会被黑客控制，网站会被黑客重定向至新页面，或者显示广告、违法犯罪等内容。</p><h2 id="不安全的反序列化"><a href="#不安全的反序列化" class="headerlink" title="不安全的反序列化"></a>不安全的反序列化</h2><p>攻击程序会尝试在不进行任何验证的情况下，对数据进行反序列化，不安全的反序列化会导致远程代码执行、重放攻击、注入攻击等。</p><h2 id="使用具有已知漏洞的组件"><a href="#使用具有已知漏洞的组件" class="headerlink" title="使用具有已知漏洞的组件"></a>使用具有已知漏洞的组件</h2><p>如果Web应用程序含有已知的漏洞，攻击者可利用漏洞获取数据或接管服务器。Web应用程序所使用的框架、库或者其他软件模块，会破坏应用程序的防御，造成更为严重的后果。</p><h2 id="日志记录和监控不足"><a href="#日志记录和监控不足" class="headerlink" title="日志记录和监控不足"></a>日志记录和监控不足</h2><p>日志记录和监控是一种有效的防范手段，它能在发送问题时，帮助你迅速采取行动，如果应用程序日志记录和监控不足，黑客能进一步控制系统，造成更大、更长远的危害。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>漏洞复现A</title>
       <link href="/2021/11/08/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0A/"/>
       <url>/2021/11/08/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0A/</url>
