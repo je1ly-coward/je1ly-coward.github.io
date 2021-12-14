@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>笑脸漏洞</title>
+      <link href="/2021/12/15/%E7%AC%91%E8%84%B8%E6%BC%8F%E6%B4%9E/"/>
+      <url>/2021/12/15/%E7%AC%91%E8%84%B8%E6%BC%8F%E6%B4%9E/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="笑脸漏洞复现"><a href="#笑脸漏洞复现" class="headerlink" title="笑脸漏洞复现"></a>笑脸漏洞复现</h2><p>1、nmap扫描同网段IP，找到目标IP<br><em>nmap 192.168.XXX.XXX</em><br>2、nmap扫描目标IP端口情况<br><a href="https://imgtu.com/i/ozShU1"><img src="https://s4.ax1x.com/2021/12/15/ozShU1.jpg" alt="ozShU1.jpg"></a><br>3、打开msfconsole<br><a href="https://imgtu.com/i/ozS7vD"><img src="https://s4.ax1x.com/2021/12/15/ozS7vD.png" alt="ozS7vD.png"></a><br>4、输入id查看用户情况<br><a href="https://imgtu.com/i/ozSLbd"><img src="https://s4.ax1x.com/2021/12/15/ozSLbd.png" alt="ozSLbd.png"></a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 渗透测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Kon-Boot</title>
       <link href="/2021/12/14/Kon-Boot/"/>
       <url>/2021/12/14/Kon-Boot/</url>
